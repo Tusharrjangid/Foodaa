@@ -7,7 +7,7 @@ const cors=require('cors')
 mongoDB()
 
 app.use((req,res,next)=>{
-    res.setHeader("Access-Control-Allow-Origin","http://localhost:3000")
+    res.setHeader("Access-Control-Allow-Origin","http://localhost:5000")
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Request-With, Content-Type, Accept",
