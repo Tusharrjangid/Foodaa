@@ -32,14 +32,14 @@ app.use("/api",require("./Routes/OrderData"))
 //         res.send(path.resolve(__dirname,'frontend','build','index.html'))
 //     })
 
-// if(process.env.NODE_ENV=='production'){
+if(process.env.NODE_ENV=='production'){
     const path=require('path')
 
     app.get('/',(req,res)=>{
         app.use(express.static(path.resolve(__dirname,'build')))
         res.sendFile(path.resolve(__dirname,'build','index.html'))
     })
-// }
+}
 
 app.listen(port,()=>{
     console.log(`Example app listening on port ${port}`)
